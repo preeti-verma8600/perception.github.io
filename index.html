@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Event-Based Feature Tracking Using the Iterative Closest Point Algorithm</title>
+  <link rel="icon" type="image/x-icon" href="static/pdfs/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Event-Based Feature Tracking Using the Iterative Closest Point Algorithm</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/adeola-joseph/" target="_blank">Joseph Adeola</a><sup>1,2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span class="author-block">
+                    <a href="https://github.com/preeti-verma8600/preeti-verma8600.github.io" target="_blank">Preeti Verma</a><sup>1,2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span class="author-block">
+                    <a href="https://github.com/MosesEbere" target="_blank">Moses Chuka Ebere</a><sup>1,2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=mCokI8oAAAAJ&hl=en" target="_blank">Nuno Gracias</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>University of Girona</span>&nbsp;&nbsp;
+                    <span class="author-block"><sup>2</sup>EMJM in Intelligent Field Robotic Systems</span>&nbsp;&nbsp;
+                  </div>
+                  <br>
+                  <div class="logo-container">
+                    <img src="./static/images/udg.png" />
+                    <img src="./static/images/ifros.png" />
+                  </div>
+                  <br>
+                  <!-- PDF Link -->
+                  <span class="link-block">
+                    <a href="https://drive.google.com/file/d/1PBBUj2OgENMXlaPxH5oxS4nlkR7BIspx/view"" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                  <!-- Video Link -->
+                  <span class="link-block">
+                    <a href="https://drive.google.com/drive/folders/10ekZPUeOStn5hp15xM_BMFE2IaK-CAbB?usp=sharing" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-google-drive"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/preeti-verma8600/perception.github.io" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The development of event-based vision sensors, notably the Dynamic and Active-pixel Vision sensor (DAVIS), marks a significant step forward in the fields of computer vision and robotics. These sensors, characterized by their ability to capture asynchronous brightness changes and synchronous grayscale frames, offer advantages in terms of high temporal resolution, low latency, and wide dynamic range. To effectively harness these capabilities, it is essential to develop algorithms specifically designed for their unique data output. This research presents a method for event-based feature tracking, utilizing the Iterative Closest Point (ICP) algorithm. The approach involves grouping events and converting the data into image frames at set intervals, thereby reducing computational demands and enhancing the feasibility of robotic applications. The methodology includes efficient event binning and employs the Shi-Tomasi and Canny edge detectors for feature detection, alongside the ICP algorithm for precise feature tracking. The research includes a thorough assessment of feasibility and performance, highlighting the potential benefits of event-based vision sensors in improving real-time perception and responsiveness in dynamic environments. The findings of this study contribute to advancing robotics perception and indicate promising directions for future research in this area.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+      <!-- Animation. -->
+      <div class="rows is-centered ">
+        <div class="row is-full-width">
+            <!--/ Methodology. -->
+            <h2 class="title is-3 has-text-centered">Methodology</h2>
+            <div class="container">
+              <div class="columns is-vcentered is-centered">
+                <div class="column is-narrow has-text-centered">
+                  <img src="./static/images/event_tracking.png" alt="Event Tracking Methodology" class="image-fit"/>
+                </div>
+              </div>
+              <br>
+              <div class="content">
+                <h3>A. Event Binning</h3>
+                <p>
+                  Events are grouped within selected intervals and converted into binary image frames to reduce computational load. Pixel locations with events are assigned a value of 255, creating white pixels on a black background for efficient processing.
+                </p>
+                
+                <h3>B. Feature Detection</h3>
+                <p>
+                  Corner detection is performed using the Shi-Tomasi feature detector. The Canny edge detector generates a binary edge map. Local edge-map patches are extracted around detected corners, forming model point sets for tracking.
+                </p>
+                
+                <h3>C. Feature Tracker</h3>
+                <p>
+                  Data points are extracted from event frames based on patches around each feature. The ICP algorithm aligns these data points with model points, iteratively refining the transformation to minimize the distance between corresponding points. Features are transformed and updated for subsequent event frames, ensuring continuous tracking.
+                </p>
+                
+                <h3>D. Feature Reinitialization</h3>
+                <p>
+                  When tracked features fall below a minimum threshold, a new intensity frame is used for reinitialization. The process continues until sufficient features are detected for reliable tracking.
+                </p>
+                
+                <h3>E. Ground Truth Estimate</h3>
+                <p>
+                  Harris corner detector and SIFT algorithm are used to detect and match features across frames. RANSAC estimates the transformation, and the homography transformation updates feature positions, enabling trajectory estimation over time.
+                </p>
+              </div>
+            </div>
+
+            <br>
+            <br>
+            <!--/ Results. -->
+            <!-- <h2 class="title is-3 has-text-centered">Results</h2> -->
+            <!-- <h2 class="title is-3 has-text-centered">Results and Discussion</h2> -->
+            <h2 class="title is-3 has-text-centered">Results and Discussion</h2>
+            <div class="container">
+              <div class="content">
+                <p>
+                  The performance of the event-based feature tracker was evaluated on scenes with well-defined edges. The following sections present the intermediate results from different stages of the integration pipeline.
+                </p>
+
+                <h3>Binning Events</h3>
+                <p>
+                  Various binning sizes were tested to balance between capturing sufficient feature transformations and avoiding motion blur. A bin size of 1000 events was optimal for the shapes_6DOF dataset.
+                </p>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/2970000_100.jpg" alt="100 Events per Bin" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">100 Events per Bin</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/2970000_500.jpg" alt="500 Events per Bin" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">500 Events per Bin</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/2970000_1000.jpg" alt="1000 Events per Bin" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">1000 Events per Bin</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/2970000_2500.jpg" alt="2500 Events per Bin" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">2500 Events per Bin</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/2970000_5000.jpg" alt="5000 Events per Bin" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">5000 Events per Bin</div>
+                  </div>
+                </div>
+                <br><br>
+
+                <h3>Model Points</h3>
+                <p>
+                  The Shi-Tomasi corner detector was chosen over the Harris detector due to its ability to detect more accurate corners. The Canny edge detector created binary edge-maps, and edge-map patches were used to form model point sets for tracking.
+                </p>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/harris_corner_image.png" alt="Harris Corners" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Harris Corners</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/5_corner.png" alt="Shi-Tomasi Corners" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Shi-Tomasi Corners</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/frame_00000005.png" alt="Reference Intensity Image" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Reference Intensity Image</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/5_edges.png" alt="Canny Edges" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Canny Edges</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/model_points_10x10.png" alt="10x10 Pixel Patches" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">10x10 Pixel Patches</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/model_points_19x19.png" alt="19x19 Pixel Patches" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">19x19 Pixel Patches</div>
+                  </div>
+                </div>
+                <br><br>
+
+                <h3>Outlier Rejection</h3>
+                <p>
+                  Non-informative patches with few edge pixels were discarded, improving the feature detection module.
+                </p>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/model_points_1.png" alt="Before Outlier Rejection" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Before Outlier Rejection</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/model_points_afterOUTREJ.jpg" alt="After Outlier Rejection" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">After Outlier Rejection</div>
+                  </div>
+                </div>
+                <br><br>
+
+                <h3>Data Points</h3>
+                <p>
+                  Data points extracted from events within patches are highlighted in red.
+                </p>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/data_1.png" alt="Data Points Extracted from Events" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Data Points Extracted from Events</div>
+                  </div>
+                </div>
+                <br><br>
+
+                <h3>ICP Results and Reinitialization</h3>
+                <p>
+                  The ICP algorithm successfully aligned model points. Reinitialization occurred when tracked features fell below a threshold.
+                </p>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/frame_3.png" alt="Before Reinitialization" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Before Reinitialization</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/frame_89.png" alt="After Reinitialization" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">After Reinitialization</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <video controls class="uniform-image">
+                      <source src="./static/videos/ICP_before_and_after.avi" type="video/avi">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="subtitle has-text-centered">ICP Before and After</div>
+                  </div>
+                </div>
+                <br><br>
+
+                <h3>Ground Truth</h3>
+                <p>
+                  The ground truth estimation pipeline included Harris corner detection, keypoint extraction, and descriptor computation.
+                </p>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/harris_corners.jpg" alt="Detected Corners" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Detected Corners</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/harris_corners_threshold.jpg" alt="Dilated Corners" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Dilated Corners</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/dialated_corners.jpg" alt="Extracted Keypoints" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Extracted Keypoints</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/colored_image_x_before.jpg" alt="Extracted Descriptors" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Extracted Descriptors</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <video controls class="uniform-image">
+                      <source src="./static/videos/ground_truth_video2.avi" type="video/avi">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="subtitle has-text-centered">Ground Truth Video</div>
+                  </div>
+                </div>
+                <br><br>
+
+                <h3>Final Tracking Results</h3>
+                <p>
+                  The final tracking results show the trajectory of model points and interest points (corners) between different intensity image frames.
+                </p>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/model_point_trajectory_5_24.png" alt="Model Points - Side View" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Model Points - Side View</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/model_point_trajectory_5_24_top.png" alt="Model Points - Top View" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Model Points - Top View</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/corner_trajectory_5_24.png" alt="Corners - Side View" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Corners - Side View</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/corner_trajectory_5_24_top.png" alt="Corners - Top View" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Corners - Top View</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/corner_trajectory_5_24_front.png" alt="Corners - Front View" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Corners - Front View</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <video controls class="uniform-image">
+                      <source src="./static/videos/detected_corner_video.avi" type="video/avi">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="subtitle has-text-centered">Detected Corners Video</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <video controls class="uniform-image">
+                      <source src="./static/videos/detected_edges_video.avi" type="video/avi">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="subtitle has-text-centered">Detected Edges Video</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <video controls class="uniform-image">
+                      <source src="./static/videos/model_pnt_video.avi" type="video/avi">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="subtitle has-text-centered">Model Points Video</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <video controls class="uniform-image">
+                      <source src="./static/videos/model_pnt_video10.avi" type="video/avi">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="subtitle has-text-centered">Model Points Video (10x)</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <video controls class="uniform-image">
+                      <source src="./static/videos/outlier_rejection_4px.avi" type="video/avi">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="subtitle has-text-centered">Outlier Rejection (4px)</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <video controls class="uniform-image">
+                      <source src="./static/videos/output_100fs.avi" type="video/avi">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="subtitle has-text-centered">Output (100fps)</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <video controls class="uniform-image">
+                      <source src="./static/videos/patches_video.avi" type="video/avi">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="subtitle has-text-centered">Patches Video</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="container">
+              <div class="content">
+                <p>
+                  The performance of the event-based feature tracker was evaluated on scenes with well-defined edges. The following sections present the intermediate results from different stages of the integration pipeline.
+                </p>
+
+                <h3>Binning Events</h3>
+                <p>
+                  Various binning sizes were tested to balance between capturing sufficient feature transformations and avoiding motion blur. A bin size of 1000 events was optimal for the shapes_6DOF dataset.
+                </p>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/2970000_100.jpg" alt="100 Events per Bin" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">100 Events per Bin</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/2970000_500.jpg" alt="500 Events per Bin" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">500 Events per Bin</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/2970000_1000.jpg" alt="1000 Events per Bin" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">1000 Events per Bin</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/2970000_2500.jpg" alt="2500 Events per Bin" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">2500 Events per Bin</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/2970000_5000.jpg" alt="5000 Events per Bin" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">5000 Events per Bin</div>
+                  </div>
+                </div>
+                <br><br>
+
+                <h3>Model Points</h3>
+                <p>
+                  The Shi-Tomasi corner detector was chosen over the Harris detector due to its ability to detect more accurate corners. The Canny edge detector created binary edge-maps, and edge-map patches were used to form model point sets for tracking.
+                </p>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/harris_corner_image.png" alt="Harris Corners" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Harris Corners</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/5_corner.png" alt="Shi-Tomasi Corners" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Shi-Tomasi Corners</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/frame_00000005.png" alt="Reference Intensity Image" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Reference Intensity Image</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/5_edges.png" alt="Canny Edges" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Canny Edges</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/model_points_10x10.png" alt="10x10 Pixel Patches" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">10x10 Pixel Patches</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/model_points_19x19.png" alt="19x19 Pixel Patches" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">19x19 Pixel Patches</div>
+                  </div>
+                </div>
+                <br><br>
+
+                <h3>Outlier Rejection</h3>
+                <p>
+                  Non-informative patches with few edge pixels were discarded, improving the feature detection module.
+                </p>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/model_points_1.png" alt="Before Outlier Rejection" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Before Outlier Rejection</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/model_points_afterOUTREJ.jpg" alt="After Outlier Rejection" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">After Outlier Rejection</div>
+                  </div>
+                </div>
+                <br><br>
+
+                <h3>Data Points</h3>
+                <p>
+                  Data points extracted from events within patches are highlighted in red.
+                </p>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/data_1.png" alt="Data Points Extracted from Events" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Data Points Extracted from Events</div>
+                  </div>
+                </div>
+                <br><br>
+
+                <h3>ICP Results and Reinitialization</h3>
+                <p>
+                  The ICP algorithm successfully aligned model points. Reinitialization occurred when tracked features fell below a threshold.
+                </p>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/frame_3.png" alt="Before Reinitialization" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Before Reinitialization</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/frame_89.png" alt="After Reinitialization" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">After Reinitialization</div>
+                  </div>
+                </div>
+                <br><br>
+
+                <h3>Ground Truth</h3>
+                <p>
+                  The ground truth estimation pipeline included Harris corner detection, keypoint extraction, and descriptor computation.
+                </p>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/harris_corners.jpg" alt="Detected Corners" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Detected Corners</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/harris_corners_threshold.jpg" alt="Dilated Corners" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Dilated Corners</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/dialated_corners.jpg" alt="Extracted Keypoints" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Extracted Keypoints</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/colored_image_x_before.jpg" alt="Extracted Descriptors" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Extracted Descriptors</div>
+                  </div>
+                </div>
+                <br><br>
+
+                <h3>Final Tracking Results</h3>
+                <p>
+                  The final tracking results show the trajectory of model points and interest points (corners) between different intensity image frames.
+                </p>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/model_point_trajectory_5_24.png" alt="Model Points - Side View" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Model Points - Side View</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/model_pnt_tra_5_24.png" alt="Model Points - Front View" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Model Points - Front View</div>
+                  </div>
+                </div>
+                <div class="columns is-vcentered is-centered">
+                  <div class="column is-narrow">
+                    <img src="./static/images/corner_tra_5_24.png" alt="Corners - Side View" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Corners - Side View</div>
+                  </div>
+                  <div class="column is-narrow">
+                    <img src="./static/images/corner_traj2_5_24.png" alt="Corners - Front View" class="uniform-image"/>
+                    <div class="subtitle has-text-centered">Corners - Front View</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div> -->
+            <br>
+            <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="acknowledgements">
+  <div class="container content is-max-desktop">
+    <h2 class="title">Acknowledgements</h2>
+    <p>This project is part of the IFRoS program course. If you are interested in the project or wish to utilize it for any purpose, please contact the author first.</p>
+    <p>The page template is borrowed from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page, with special thanks to them. This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+  </div>
+</section>
+
+  </body>
+  </html>
