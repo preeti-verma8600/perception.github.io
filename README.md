@@ -18,6 +18,4 @@ This research explores event-based feature tracking using DAVIS sensors, leverag
 The page template is borrowed from the Nerfies project page. Special thanks to the Nerfies team for their valuable contribution.
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This website template is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-=======
-# perception.github.io
->>>>>>> origin/main
+
