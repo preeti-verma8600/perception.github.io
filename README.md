@@ -1,16 +1,16 @@
-<<<<<<< HEAD
-# Autonomous Navigation Project
+# Perception Project
 
-## Project Overview
+**Project Overview: Event-Based Feature Tracking with DAVIS Sensors**
 
-This project presents a architecture for autonomous exploration and navigation using the Turtlebot robot in uncharted environments. It integrates a frontier-based exploration algorithm, high-resolution 2D Lidar for precise mapping, and advanced path planning with the Open Motion Planning Library (OMPL). The system ensures smooth navigation and real-time obstacle avoidance, validated through experiments in both real-world and simulated scenarios, demonstrating improved exploration capabilities and collision-free path planning.
+This research explores event-based feature tracking using DAVIS sensors, leveraging their high temporal resolution and low latency. It utilizes the Iterative Closest Point (ICP) algorithm to convert event data into image frames at intervals, optimizing for real-time robotic applications. The study demonstrates DAVIS sensors' potential to enhance dynamic environment perception and lays groundwork for future robotics advancements.
 
-[Project Link](https://preeti-verma8600.github.io/autonomous_navigation.github.io).
+
+[Project Link](https://preeti-verma8600.github.io/perception.github.io).
 
 ### Project Members
 
-- Preeti Verma
 - Joseph Adeola
+- Preeti Verma
 - Moses Chuka Ebere
 
 ### Acknowledgments
